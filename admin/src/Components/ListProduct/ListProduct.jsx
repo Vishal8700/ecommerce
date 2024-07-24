@@ -7,7 +7,7 @@ const ListProduct = () => {
 
     const fetchInfo = async () => {
         try {
-            const response = await fetch('http://localhost:4000/allproducts');
+            const response = await fetch('https://ecommerce-backend-uflo.onrender.com/allproducts');
             if (!response.ok) {
                 throw new Error('Failed to fetch products');
             }
@@ -23,7 +23,7 @@ const ListProduct = () => {
     }, []);
 
     const remove_product= async(id)=>{
-        await fetch('http://localhost:4000/removeproduct',{
+        await fetch('https://ecommerce-backend-uflo.onrender.com/removeproduct',{
             method: 'POST',
             headers: {
                 Accept:'application/json',
